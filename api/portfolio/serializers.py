@@ -26,6 +26,9 @@ class CertificatesSerializer(serializers.ModelSerializer):
 
 
 class PortfolioSerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField('get_image_url')
     class Meta:
         model = Portfolio
         fields = "__all__"
+    def get_image_url(self, obj):
+        return obj.image.url

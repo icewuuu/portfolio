@@ -23,7 +23,7 @@ class Certificates(models.Model):
 class Portfolio(models.Model):
     title = models.CharField(max_length = 50)
     description = models.TextField()
-    image = models.ImageField(upload_to="uploads")
+    image = models.ImageField(null=True,blank=True,upload_to="images/")
     url = models.URLField()
     order = models.IntegerField()
 

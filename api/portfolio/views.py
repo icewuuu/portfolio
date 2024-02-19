@@ -29,6 +29,7 @@ class WorkViewSet(viewsets.ModelViewSet):
     serializer_class = WorkSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
+
 class CertificatesViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Certificates to be viewed or edited.
